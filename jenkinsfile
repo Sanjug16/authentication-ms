@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat "docker build -t auth-service ."
-                bat "docker run -p 6090:8090 -d --name auth-container auth-image"
+                bat "docker run -p 6090:8090 -d --name auth-service --network my-net auth-service"
             }
         }
     }
