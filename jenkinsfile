@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'my-maven'
-        jdk 'my-jdk'
+        jdk 'my-jdk-17'
     }
     stages {
         stage('Clone') {
