@@ -12,6 +12,7 @@ pipeline {
         }
         stage('pre-Build'){
             steps {
+                bat "docker rmi -f auth-service"
                 bat "docker rm -f auth-service"
             }
         }
